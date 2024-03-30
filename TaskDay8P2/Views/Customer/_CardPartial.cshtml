@@ -1,0 +1,14 @@
+﻿@model TaskDay8P2.Models.Product
+
+
+    <img src="@Model.Image" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.TotalPrice EG</li>
+        <li class="list-group-item">@Model.Customer.Name</li>
+        <li class="list-group-item">@Model.Customer.Email</li>
+    </ul>
+   

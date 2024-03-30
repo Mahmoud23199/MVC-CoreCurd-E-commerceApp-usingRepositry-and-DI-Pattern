@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TaskDay8P2.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div>
+    <a asp-action="Index" asp-controller="Customer">Go Back to Customer</a>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var Model in Model)
+        {
+            <div class="card" style="width: 18rem; margin-right: 10px;">
+
+                <partial name="_CardPartial" model="@Model"></partial> 
+                
+                <div class="card-body">
+                    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@Model.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
